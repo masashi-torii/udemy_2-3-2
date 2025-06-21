@@ -1,23 +1,21 @@
-import { useState } from 'react'
+// import './App.css'
+// import "./styles.css"
+import { Router } from "./router/Router";
 
-import './App.css'
-import { PrimaryButton } from './components/atoms/button/PrimaryButton'
-import { SecondaryButton } from './components/atoms/button/SecondaryButton'
-import { SearchInput } from './components/molecules/SearchInput'
+const user = {
+  name: "じゃけえ",
+  image: "https://picsum.photos/150/160",
+  email: "1234567@example.com",
+  phone: "090-1234-4321",
+  company: {
+    name: "テスト株式会社"
+  },
+  website: "https://google.com"
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <PrimaryButton>テスト</PrimaryButton>
-        <SecondaryButton>検索</SecondaryButton>
-        <br />
-        <SearchInput />
-      </div>
-    </>
-  )
 }
 
-export default App
+export default function App() {
+  return (
+    <Router />
+  )
+}
